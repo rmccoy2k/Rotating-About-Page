@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Calibri&display=swap');
+
+/* (*) below means the universal symbol and applying it to everything */
+* {
+  box-sizing: border-box;
+}
+
+/* body */
+body {
+  font-family: 'Calibri', sans-serif;
+  background-color: #333;
+  color: #222;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* .container */
+.container {
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+/* .container.show-nav */
+.container.show-nav {
+  transform: rotate(-25deg);
+}
+
+/* .circle-container */
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+/* .circle */
+.circle {
+  background-color: #37c0fb;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s Linear;
+}
+
+/* .container.show-nav.circle */
+.container.show-nav.circle {
+  transform: rotate(-70deg);
+}
+
+/* .circle button */
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 68%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+
+  /* h2 {
+    font-size: 1.25em; and
+    h3 {
+    font-size: 1em; */
+}
+
+/* .circle button:focus */
+.circle button:focus {
+  outline: none;
+}
+
+/* .circle button#open */
+.circle button#open {
+  left: 60%;
+}
+
+/* .circle button#close */
+.circle button#close {
+  top: 75%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+/* Container Show Nav */
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+/* Nav */
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+/* nav ul */
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+/* nav ul li */
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 25px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+/* nav ul li i (For space between the icon & text on the nav menu) */
+nav ul li i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-140%);
+}
+
+.content img {
+  max-width: 100%;
+  transition: transform 0.4s ease-in;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+/* .content small {
+  color: #555;
+  font-style: italic;
+} */
+
+.content p {
+  color: black;
+  line-height: 1.5;
+}
